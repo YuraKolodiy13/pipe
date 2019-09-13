@@ -8,8 +8,7 @@ get_header(); ?>
   <div class="banner section" style="background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(0,0,0,0.5)), url(<?php the_field('contacts_img', 'options');?>) no-repeat center; background-size: cover">
     <div class="wrapper">
       <div class="banner__content animateTranslate">
-        <h1><?php the_field('banner_title'); ?></h1>
-        <p><?php the_field('banner_text'); ?></p>
+        <h1><?php the_title(); ?></h1>
       </div>
     </div>
   </div>
@@ -24,7 +23,6 @@ get_header(); ?>
         </li>
       </ul>
       <div class="contact">
-        <h1 class="contact__mainTitle"><?php the_title(); ?></h1>
         <div class="contact__wrapper">
           <div class="contact__info">
             <div class="contact__block">

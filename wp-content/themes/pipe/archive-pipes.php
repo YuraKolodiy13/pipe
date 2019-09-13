@@ -9,8 +9,7 @@ get_header(); ?>
     <div class="banner section" style="background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(0,0,0,0.6)), url(<?php the_field('pipes_img', 'options');?>) no-repeat center; background-size: cover">
       <div class="wrapper">
         <div class="banner__content animateTranslate">
-          <h1><?php the_field('banner_title'); ?></h1>
-          <p><?php the_field('banner_text'); ?></p>
+          <h1>Каталог труб</h1>
         </div>
       </div>
     </div>
@@ -20,7 +19,7 @@ get_header(); ?>
           <a href="/" class="breadcrumb__link">Home Page</a>
         </li>
         <li class="breadcrumb__item">
-          <a><?php the_title(); ?></a>
+          <a>Каталог труб</a>
         </li>
       </ul>
 
@@ -42,7 +41,7 @@ get_header(); ?>
         </ul>
       </div>
       <div class="categories categories--mob">
-        <div class="categories__current">All</div>
+        <div class="categories__current">Всі</div>
         <ul>
           <li class="active"><a>Всі</a></li>
           <?php if ( $terms && !is_wp_error( $terms ) ) :
@@ -55,7 +54,7 @@ get_header(); ?>
       </div>
 
       <div class="blog__items section">
-        <?php   $args = array( 'post_type' => 'pipes', 'posts_per_page' => -1 );
+        <?php   $args = array( 'post_type' => 'pipes', 'posts_per_page' => 10, 'paged' => $paged );
         $my_posts = new WP_Query( $args );
         if ( $my_posts->have_posts() ) :?>
           <?php while ( $my_posts->have_posts() ) : $my_posts->the_post(); ?>
