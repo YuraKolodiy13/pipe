@@ -1,0 +1,102 @@
+.paginationWrap{
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  .navigation{
+    display: flex;
+    align-items: center;
+    position: relative;
+    span.current{
+      height: 40px;
+      width: 40px;
+      background: linear-gradient(90deg, #238924 0%, #24B024 100%);
+      border-radius: 50%;
+      color: #fff;
+      border: none;
+    }
+    span, a{
+      height: 40px;
+      width: 40px;
+      border: 2px solid #888B97;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #888B97;
+      font-family: "GothamProMedium";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 29px;
+      margin: 0 7px;
+      box-sizing: border-box;
+    }
+    a{
+      transition: .3s;
+      &:hover{
+        border-color: #24B024;
+        color: #24B024;
+      }
+    }
+    .dots{
+      height: auto;
+      width: auto;
+      border: none;
+    }
+    .prev, .next{
+      font-size: 0;
+      border: none;
+      margin: 0;
+      position: absolute;
+      width: 40px;
+      height: 20px;
+      &::before{
+        content: '';
+        width: 30px;
+        height: 3px;
+        background-color: #888B97;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .3s;
+      }
+      &::after{
+        content: '';
+        width: 12px;
+        height: 12px;
+        background-color: transparent;
+        border-left: 3px solid #888B97;
+        border-top: 3px solid #888B97;
+        position: absolute;
+        top: 50%;
+        transition: .3s;
+      }
+      &:hover::before{
+        background-color: #24B024;
+      }
+      &:hover::after{
+        border-color: #24B024;
+      }
+    }
+    .prev{
+      left: -100px;
+      &::before{
+        left: 0;
+      }
+      &::after{
+        left: 0;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+    .next{
+      right: -100px;
+      &::before{
+        right: 0;
+      }
+      &::after{
+        right: 0;
+        transform: translateY(-50%) rotate(135deg);
+      }
+    }
+  }
+}

@@ -18,8 +18,7 @@ function theme_styles(){
   wp_enqueue_script( 'jquery' );
   wp_enqueue_script('main', get_template_directory_uri() . '/dist/scripts.js', array( 'jquery' ), '', true);
 
-//  wp_enqueue_script( 'slick', get_template_directory_uri() . '/src/_lib/slick.js', array( 'jquery' ), null, true );
-//
+  wp_enqueue_script( 'slick', get_template_directory_uri() . '/src/_lib/slick.js', array( 'jquery' ), null, true );
 }
 
 function myMenu(){
@@ -28,10 +27,10 @@ function myMenu(){
 
 
 function create_post_types() {
-    register_post_type( 'products', array(
+    register_post_type( 'pipes', array(
             'labels'      => array(
-                'name'          => __( 'Товари' ),
-                'singular_name' => __( 'Товар' )
+                'name'          => __( 'Труби' ),
+                'singular_name' => __( 'Труба' )
             ),
             'public'      => true,
             'has_archive' => true,
@@ -68,7 +67,7 @@ function create_post_types() {
         'rewrite'           => true,
         'show_admin_column' => true
     );
-    register_taxonomy( 'products-categories', 'products', $casearr_studies );
+    register_taxonomy( 'pipes-categories', 'pipes', $casearr_studies );
 }
 
 add_action( 'init', 'create_post_types' );

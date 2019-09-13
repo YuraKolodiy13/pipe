@@ -1,19 +1,7 @@
-@font-face {
-  font-family: 'Gotham Pro';
-  src: url("../fonts/GothaProReg.woff");
-}
-@font-face {
-  font-family: "GothamProMedium";
-  src: url("../fonts/GothaProMed.woff");
-}
-@font-face {
-  font-family: "GothamPrBold";
-  src: url("../fonts/GothaProBol.woff");
-}
-
 body{
   margin: 0;
   padding: 0;
+  font-family: Cuprum, Arial, sans-serif;
 }
 
 .btn{
@@ -27,7 +15,6 @@ body{
   justify-content: center;
   border-radius: 25px;
   color: #fff;
-  font-family: "GothamProMedium";
   font-size: 15px;
   font-weight: 500;
   line-height: 29px;
@@ -72,7 +59,7 @@ body{
 
 .subTitle{
   color: #393E52;
-  font-family: Poppins;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 16px;
   line-height: 29px;
   position: relative;
@@ -90,7 +77,7 @@ body{
 }
 .title {
   color: #393E52;
-  font-family: "GothamProMedium";
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 45px;
   font-weight: 500;
   line-height: 50px;
@@ -124,7 +111,7 @@ body{
   margin-top: auto;
   .learnMore{
     color: #888B97;
-    font-family: "GothamProMedium";
+    font-family: Cuprum, Arial, sans-serif;
     font-size: 17px;
     font-weight: 500;
     line-height: 24px;
@@ -188,7 +175,7 @@ body{
 
 .text {
   color: #616575;
-  font-family: Poppins;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
   line-height: 29px;
   margin: 0 0 20px;
@@ -198,7 +185,7 @@ body{
   position: relative;
   padding-left: 30px;
   color: #616575;
-  font-family: Poppins;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;
   &::before {
@@ -345,13 +332,66 @@ body{
 }
 .loadmore {
   color: #888B97;
-  font-family: "GothamProMedium";
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
   font-weight: 500;
   line-height: 29px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.breadcrumbs{
+  margin: 0 0 65px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  .breadcrumb__item{
+    a{
+      text-decoration: none;
+      color: rgba(136,139,151, .8);
+      font-size: 14px;
+      font-family: Cuprum, Arial, sans-serif;
+      font-weight: 100;
+    }
+    a[href]{
+      transition: .3s;
+      &:hover{
+        color: #393E52;
+      }
+    }
+    &:not(:last-child){
+      position: relative;
+      padding-right: 15px;
+      margin-right: 10px;
+    }
+    &:not(:last-child)::after{
+      content: '>';
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: rgba(136,139,151, .8);
+    }
+    &:last-of-type{
+      a{
+        color: #393E52;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .breadcrumbs {
+    margin-bottom: 25px ;
+  }
+}
+
+@media (max-width: 991px) {
+  .breadcrumbs{
+    display: none;
+  }
 }
 
 @media (max-width: 1665px) {

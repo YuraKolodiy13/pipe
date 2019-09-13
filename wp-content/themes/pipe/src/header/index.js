@@ -1,5 +1,4 @@
 document.querySelector('.header__search-toggle').addEventListener('click', function () {
-    console.log(21)
     document.querySelector('.header').classList.toggle('searchOpen');
     $('.header__search--wrap--mob').slideToggle();
     document.querySelector('.header__nav--tablet').classList.remove('showMenu');
@@ -36,7 +35,6 @@ function hideMenu() {
     });
 }
 hideMenu();
-
 
 //drop-down
 $(document).ready(function () {

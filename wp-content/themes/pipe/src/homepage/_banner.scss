@@ -2,11 +2,9 @@
   overflow: hidden;
 }
 .banner{
-  height: 100vh;
+  height: 500px;
   display: flex;
   align-items: center;
-  max-height: 1015px;
-  min-height: 650px;
   position: relative;
   .wrapper{
     position: static;
@@ -14,7 +12,7 @@
   .banner__content{
     h1{
       color: #393E52;
-      font-family: "GothamProMedium";
+      font-family: Cuprum, Arial, sans-serif;
       font-size: 80px;
       font-weight: bold;
       line-height: 95px;
@@ -23,7 +21,7 @@
     }
     p{
       color: #393E52;
-      font-family: Poppins;
+      font-family: Cuprum, Arial, sans-serif;
       font-size: 24px;
       line-height: 36px;
       margin: 0 0 50px;

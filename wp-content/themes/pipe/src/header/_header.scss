@@ -22,7 +22,7 @@
         padding: 5px 0 0;
         list-style: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         .menu-item-has-children{
           position: relative;
           .sub-menu{
@@ -54,7 +54,7 @@
         }
         a{
           color: #393E52;
-          font-family: "Gotham Pro";
+          font-family: Cuprum, Arial, sans-serif;
           font-size: 16px;
           line-height: 29px;
           text-decoration: none;
@@ -68,12 +68,15 @@
         .current-menu-parent{
           & > a{
             color: #238624;
-            font-family: "GothamProMedium";
+            font-family: Cuprum, Arial, sans-serif;
             font-weight: 500;
           }
         }
         & > li{
           padding: 25px 0;
+          &:not(:last-of-type){
+            margin-right: 25px;
+          }
         }
       }
     }
@@ -107,7 +110,7 @@
                   border-radius: 20px;
                   border: 1px solid transparent;
                   color: #515871;
-                  font-family: Poppins;
+                  font-family: Cuprum, Arial, sans-serif;
                   font-size: 17px;
                   line-height: 24px;
                 }
@@ -131,12 +134,12 @@
                     }
                   }
                 }
-                ::-webkit-input-placeholder {font-family: Poppins;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
-                ::placeholder {font-family: Poppins;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
-                :-moz-placeholder {font-family: Poppins;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
-                ::-moz-placeholder {font-family: Poppins;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
-                :-ms-input-placeholder {font-family: Poppins;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
-                ::-ms-input-placeholder {font-family: Poppins;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
+                ::-webkit-input-placeholder {font-family: Cuprum, Arial, sans-serif;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
+                ::placeholder {font-family: Cuprum, Arial, sans-serif;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
+                :-moz-placeholder {font-family: Cuprum, Arial, sans-serif;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
+                ::-moz-placeholder {font-family: Cuprum, Arial, sans-serif;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
+                :-ms-input-placeholder {font-family: Cuprum, Arial, sans-serif;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
+                ::-ms-input-placeholder {font-family: Cuprum, Arial, sans-serif;font-size: 15px;color: #888B97;line-height: 20px;transition: .3s}
               }
             }
           }
@@ -178,7 +181,7 @@
           justify-content: center;
           align-items: center;
           color: #FFFFFF;
-          font-family: "Gotham Pro";
+          font-family: Cuprum, Arial, sans-serif;
           font-size: 16px;
           line-height: 29px;
           margin-left: 30px;
