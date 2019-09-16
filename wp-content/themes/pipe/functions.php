@@ -106,3 +106,19 @@ function wp_corenavi() {
   echo $pages . paginate_links($a);
   if ($max > 1) echo '</div>';
 }
+
+//Remove Google ReCaptcha code/badge everywhere apart from select pages
+add_action('wp_print_scripts', function () {
+  //Add pages you want to allow to array
+  if ( !is_page( array( 'contacts','some-other-page-with-form' ) ) ){
+    wp_dequeue_script( 'google-recaptcha' );
+  }
+});
+
+add_action( 'wp_enqueue_scripts', 'sr_remove_cf7_scripts' );
+function sr_remove_cf7_scripts() {
+  if ( !is_page('contacts') ) {
+    wp_deregister_style( 'contact-form-7' );
+    wp_deregister_script( 'contact-form-7' );
+  }
+}

@@ -15,7 +15,7 @@
     align-items: center;
     position: static;
     .header__nav{
-      width: 75%;
+      width: 90%;
       transition: .3s;
       .topNav{
         margin: 0;
@@ -97,7 +97,7 @@
             pointer-events: none;
             position: absolute;
             top: 25px;
-            right: 200px;
+            right: 75px;
             left: calc(100% - 200px);
             .searchform{
               .custom-search-form{

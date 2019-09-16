@@ -8,10 +8,10 @@
   <title><?php wp_title()?></title>
   <meta name='description' content='<?php bloginfo('description'); ?>'>
 
-  <link href="<?php echo get_template_directory_uri();?>/images/fav/favicon-16x16.png" type="image/x-icon" rel="shortcut icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri();?>/images/fav/favicon-180x180.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri();?>/images/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri();?>/images/fav/favicon-16x16.png">
+  <link href="<?php echo get_template_directory_uri();?>/images/download.jpeg" type="image/x-icon" rel="shortcut icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri();?>/images/download.jpeg">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri();?>/images/download.jpeg">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri();?>/images/download.jpeg">
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet"  media="none" onload="if(media!='all')media='all'">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
 </head>

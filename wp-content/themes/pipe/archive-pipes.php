@@ -16,7 +16,7 @@ get_header(); ?>
     <div class="innerPage__wrapper wrapper">
       <ul class="breadcrumbs">
         <li class="breadcrumb__item">
-          <a href="/" class="breadcrumb__link">Home Page</a>
+          <a href="/" class="breadcrumb__link">Головна</a>
         </li>
         <li class="breadcrumb__item">
           <a>Каталог труб</a>
@@ -54,7 +54,7 @@ get_header(); ?>
       </div>
 
       <div class="blog__items section">
-        <?php   $args = array( 'post_type' => 'pipes', 'posts_per_page' => 10, 'paged' => $paged );
+        <?php   $args = array( 'post_type' => 'pipes', 'posts_per_page' => 24, 'paged' => $paged );
         $my_posts = new WP_Query( $args );
         if ( $my_posts->have_posts() ) :?>
           <?php while ( $my_posts->have_posts() ) : $my_posts->the_post(); ?>
@@ -64,7 +64,17 @@ get_header(); ?>
             </div>
             <div class="blog__info">
               <div class="blog__top">
-                <div class="blog__category"><?php the_category($post->ID)->name; ?></div>
+                <div class="blog__category">
+                  <?php
+                  $terms = get_the_terms( $post->ID, 'pipes-categories');
+                  if ( $terms != null ) {
+                    foreach ($terms as $term) {
+                      print  '<span>' . $term->name . '</span>';
+                      unset($term);
+                    }
+                  }
+                  ?>
+                </div>
               </div>
               <div class="blog__title"><?php the_title(); ?></div>
               <div class="learnMore__wrapper learnMore--green">
@@ -87,9 +97,6 @@ get_header(); ?>
 
     </div>
     <a id="back2Top" class="btn" href="#">Go up</a>
-
-    <div class="blogPage_bg-1" style="background: url('<?php echo get_template_directory_uri(); ?>/images/decor-1.png')"></div>
-    <div class="blogPage_bg-2" style="background: url('<?php echo get_template_directory_uri(); ?>/images/decor-3.png')"></div>
   </div>
 
 

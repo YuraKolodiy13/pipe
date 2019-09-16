@@ -1,7 +1,7 @@
 .paginationWrap{
-  padding: 100px 0;
   display: flex;
   justify-content: center;
+  margin-top: 40px;
   .navigation{
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@
       align-items: center;
       text-decoration: none;
       color: #888B97;
-      font-family: "GothamProMedium";
+      font-family: Cuprum, Arial, sans-serif;
       font-size: 16px;
       font-weight: 500;
       line-height: 29px;

@@ -16,7 +16,7 @@ get_header(); ?>
     <div class="wrapper">
       <ul class="breadcrumbs">
         <li class="breadcrumb__item">
-          <a href="/" class="breadcrumb__link">Home</a>
+          <a href="/" class="breadcrumb__link">Головна</a>
         </li>
         <li class="breadcrumb__item">
           <a><?php the_title(); ?></a>
@@ -56,7 +56,6 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <div class="blogPage_bg-2" style="background: url('<?php echo get_template_directory_uri(); ?>/images/decor-2.png')"></div>
 </div>
 
 
@@ -64,6 +63,6 @@ get_header(); ?>
 
 <script>
   document.addEventListener( 'wpcf7mailsent', function( event ) {
-    location = 'https://staging-echoua.kinsta.com/thank-you';
+    location = 'https:/localhost/pipe/thank-you';
   }, false );
 </script>

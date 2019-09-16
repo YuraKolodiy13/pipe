@@ -24,9 +24,13 @@
     .footer__items{
       display: flex;
       justify-content: space-between;
-      font-family: Poppins;
+      font-family: Cuprum, Arial, sans-serif;
       .footer__info{
         width: 20%;
+        img{
+          max-width: 100%;
+          height: auto;
+        }
         p{
           font-size: 15px;
           line-height: 20px;
@@ -103,7 +107,7 @@
           font-size: 16px;
           line-height: 20px;
           opacity: .5;
-          font-family: "GothamProMedium";
+          font-family: Cuprum, Arial, sans-serif;
           font-weight: 500;
         }
       }
@@ -112,9 +116,10 @@
   .footer__copyright{
     display: flex;
     align-items: center;
+    justify-content: center;
     opacity: 0.7;
     color: #FFFFFF;
-    font-family: Poppins;
+    font-family: Cuprum, Arial, sans-serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 20px;
@@ -123,11 +128,6 @@
       margin-right: 30px;
       p{
         margin: 0;
-      }
-    }
-    .footer__policy{
-      & a:first-of-type{
-        margin-right: 30px;
       }
     }
   }

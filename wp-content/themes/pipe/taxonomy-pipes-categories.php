@@ -16,7 +16,7 @@ get_header(); ?>
     <div class="innerPage__wrapper wrapper">
       <ul class="breadcrumbs">
         <li class="breadcrumb__item">
-          <a href="/" class="breadcrumb__link">Home Page</a>
+          <a href="/" class="breadcrumb__link">Головна</a>
         </li>
         <li class="breadcrumb__item">
           <a>Каталог труб</a>
@@ -31,11 +31,15 @@ get_header(); ?>
 
         ?>
         <ul>
-          <li class="active"><a href="/pipe/pipes">Всі</a></li>
+          <li><a href="/pipe/pipes">Всі</a></li>
           <?php if ( $terms && !is_wp_error( $terms ) ) :
             ?>
-            <?php foreach ( $terms as $term ) { ?>
-              <li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
+            <?php foreach ( $terms as $term ) {
+              if($term->name === single_cat_title( '', false )){
+                  echo '<li class="active"><a href="' . get_category_link($term->term_id) . '">' . $term->name . '</a></li>';
+                }else{
+                  echo '<li><a href="' . get_category_link($term->term_id) . '">' . $term->name . '</a></li>';
+                } ?>
             <?php } ?>
           <?php endif;?>
         </ul>
@@ -43,11 +47,15 @@ get_header(); ?>
       <div class="categories categories--mob">
         <div class="categories__current">Всі</div>
         <ul>
-          <li class="active"><a href="/pipe/pipes">Всі</a></li>
+          <li><a href="/pipe/pipes">Всі</a></li>
           <?php if ( $terms && !is_wp_error( $terms ) ) :
             ?>
-            <?php foreach ( $terms as $term ) { ?>
-            <li><a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"><?php echo $term->name; ?></a></li>
+            <?php foreach ( $terms as $term ) {
+            if($term->name === single_cat_title( '', false )){
+              echo '<li class="active"><a href="' . get_category_link($term->term_id) . '">' . $term->name . '</a></li>';
+            }else{
+              echo '<li><a href="' . get_category_link($term->term_id) . '">' . $term->name . '</a></li>';
+            } ?>
           <?php } ?>
           <?php endif;?>
         </ul>
@@ -62,7 +70,17 @@ get_header(); ?>
               </div>
               <div class="blog__info">
                 <div class="blog__top">
-                  <div class="blog__category"><?php the_category($post->ID)->name; ?></div>
+                  <div class="blog__category">
+                  <?php
+                  $terms = get_the_terms( $post->ID, 'pipes-categories');
+                    if ( $terms != null ) {
+                      foreach ($terms as $term) {
+                        print '<span>' . $term->name . '</span>';
+                        unset($term);
+                      }
+                    }
+                    ?>
+                      </div>
                 </div>
                 <div class="blog__title"><?php the_title(); ?></div>
                 <div class="learnMore__wrapper learnMore--green">
@@ -80,23 +98,14 @@ get_header(); ?>
 
 
 
-        <div class="blogPagination">
-          <?php
-          the_posts_pagination( array(
-            'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-            'next_text'          => __( 'Next page', 'twentyfifteen' ),
-            'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
-          ) );
-          ?>
-        </div>
+      <div class="paginationWrap">
+        <?php if (function_exists('wp_corenavi')) wp_corenavi(); ?>
+      </div>
      <?php endif; ?>
       <?php wp_reset_postdata(); ?>
 
     </div>
     <a id="back2Top" class="btn" href="#">Go up</a>
-
-    <div class="blogPage_bg-1" style="background: url('<?php echo get_template_directory_uri(); ?>/images/decor-1.png')"></div>
-    <div class="blogPage_bg-2" style="background: url('<?php echo get_template_directory_uri(); ?>/images/decor-3.png')"></div>
   </div>
 
 

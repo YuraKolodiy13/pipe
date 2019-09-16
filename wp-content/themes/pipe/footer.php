@@ -1,4 +1,3 @@
-
 <footer class="footer">
   <div class="wrapper">
     <div class="footer__top">
@@ -70,7 +69,6 @@
                 <li>
                   <i class="fas fa-envelope"></i>
                   <a href="mailto:<?php the_sub_field('footer_email', 'option'); ?>"><?php the_sub_field('footer_email', 'option'); ?></a>
-                  (<?php the_sub_field('footer_email_description', 'option'); ?>)
                 </li>
               <?php
               endwhile;
@@ -91,11 +89,7 @@
     </div>
     <div class="footer__copyright">
       <div class="footer__rights">
-        <p>Copyright © <?php echo date("Y"); ?> EchoUa.  All rights reserved. </p>
-      </div>
-      <div class="footer__policy">
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms">Terms Sheet</a>
+        <p>Copyright © <?php echo date("Y"); ?> yourCompany.  All rights reserved. </p>
       </div>
     </div>
   </div>
@@ -104,13 +98,13 @@
 <?php wp_footer(); ?>
 
 <!--learn more arrow-->
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <defs>
-    <symbol id="arrow" viewBox="0 0 100 100">
-      <path d="M12.5 45.83h64.58v8.33H12.5z"/>
-      <path d="M59.17 77.92l-5.84-5.84L75.43 50l-22.1-22.08 5.84-5.84L87.07 50z"/>
-    </symbol>
-  </defs>
-</svg>
+<!--<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">-->
+<!--  <defs>-->
+<!--    <symbol id="arrow" viewBox="0 0 100 100">-->
+<!--      <path d="M12.5 45.83h64.58v8.33H12.5z"/>-->
+<!--      <path d="M59.17 77.92l-5.84-5.84L75.43 50l-22.1-22.08 5.84-5.84L87.07 50z"/>-->
+<!--    </symbol>-->
+<!--  </defs>-->
+<!--</svg>-->
 </body>
 </html>
