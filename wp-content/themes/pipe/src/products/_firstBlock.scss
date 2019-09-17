@@ -1,0 +1,97 @@
+.firstBlock{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 65px;
+  .slider-block{
+    width: 45%;
+  }
+  .firstBlock__description{
+    //width: 45%;
+    font-size: 19px;
+    line-height: 34px;
+    font-family: Cuprum, Arial, sans-serif;
+    font-weight: 500;
+    color: #444a61;
+    p{
+      margin: 0 0 30px;
+    }
+  }
+  .firstBlock__wrap{
+    box-sizing: border-box;
+    width: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    padding: 50px;
+    background-color: #fff;
+    flex: none;
+    &>.firstBlock__row:first-of-type{
+      margin-bottom: 60px;
+    }
+    .firstBlock__row{
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 29px;
+      div:first-of-type{
+        width: 180px;
+        text-transform: uppercase;
+        font-family: Cuprum, Arial, sans-serif;
+        color: #888b97;
+        flex: none;
+      }
+      div:last-of-type{
+        width: 100%;
+        color: #515871;
+        font-family: Cuprum, Arial, sans-serif;
+      }
+      .firstBlock__name{
+        font-size: 30px;
+        line-height: 36px;
+        font-family: Cuprum, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+    }
+    .firstBlock__another {
+      margin-top: 40px;
+      .firstBlock__row {
+        div:first-of-type {
+          color: #24b224;
+        }
+      }
+    }
+    .firstBlock__sites{
+      margin-top: 50px;
+      margin-left: 180px;
+      a{
+        color: #888b97;
+        font-size: 17px;
+        line-height: 29px;
+        text-decoration: none;
+        font-family: Cuprum, Arial, sans-serif;
+        border-bottom: 1px solid transparent;
+        transition: .3s;
+        margin-right: 20px;
+        &:hover{
+          border-color: #888b97;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .firstBlock{
+    flex-wrap: wrap;
+    .firstBlock__description {
+      font-size: 17px;
+      line-height: 30px;
+      width: 100%;
+    }
+    .firstBlock__wrap{
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}

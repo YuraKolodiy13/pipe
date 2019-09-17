@@ -18,7 +18,7 @@ function theme_styles(){
   wp_enqueue_script( 'jquery' );
   wp_enqueue_script('main', get_template_directory_uri() . '/dist/scripts.js', array( 'jquery' ), '', true);
 
-  wp_enqueue_script( 'slick', get_template_directory_uri() . '/src/_lib/slick.js', array( 'jquery' ), null, true );
+  wp_enqueue_script( 'lightslider', get_template_directory_uri() . '/src/_lib/lightslider.min.js', array( 'jquery' ), null, true );
 }
 
 function myMenu(){

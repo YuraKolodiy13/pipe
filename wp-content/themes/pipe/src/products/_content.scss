@@ -8,7 +8,7 @@
     .blog__category{
       font-size: 16px;
       line-height: 29px;
-      color: #24b224;
+      color: #00a046;
       text-transform: uppercase;
       font-family: Cuprum, Arial, sans-serif;
       span:not(:last-of-type){
@@ -23,7 +23,7 @@
       font-size: 16px;
       line-height: 29px;
       font-family: Cuprum, Arial, sans-serif;
-      color: #24b224;
+      color: #00a046;
       time:last-of-type{
         margin-left: 50px;
       }
@@ -32,6 +32,10 @@
   .content__img{
     height: 500px;
     margin-bottom: 60px;
+    img{
+      max-width: 100%;
+      height: auto;
+    }
   }
   h1{
     color: #424550;
@@ -112,8 +116,8 @@
       font-size: 17px;
       line-height: 29px;
       font-family: Cuprum, Arial, sans-serif;
-      color: #24b224;
-      border-bottom: 1px solid #24b224;
+      color: #00a046;
+      border-bottom: 1px solid #00a046;
       text-decoration: none;
       transition: .3s;
       &:hover{
@@ -136,7 +140,7 @@
           content: '';
           height: 1px;
           width: 20px;
-          background-color: #2BB34B;
+          background-color: #00a046;
           position: absolute;
           left: 0;
           top: 13px;
@@ -159,7 +163,7 @@
         &::before {
           content: counter(item) ". ";
           counter-increment: item;
-          color: #24b224;
+          color: #00a046;
           position: absolute;
           left: 0;
         }
@@ -173,7 +177,7 @@
       margin: 40px 65px;
       p{
         margin: 0;
-        color: #24b224;
+        color: #00a046;
       }
       span{
         position: absolute;

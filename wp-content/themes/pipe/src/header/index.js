@@ -1,9 +1,9 @@
-document.querySelector('.header__search-toggle').addEventListener('click', function () {
-    document.querySelector('.header').classList.toggle('searchOpen');
-    $('.header__search--wrap--mob').slideToggle();
-    document.querySelector('.header__nav--tablet').classList.remove('showMenu');
-    document.querySelector('.header__nav--tablet .topNav').style.display = 'none';
-});
+// document.querySelector('.header__search-toggle').addEventListener('click', function () {
+//     document.querySelector('.header').classList.toggle('searchOpen');
+//     $('.header__search--wrap--mob').slideToggle();
+//     document.querySelector('.header__nav--tablet').classList.remove('showMenu');
+//     document.querySelector('.header__nav--tablet .topNav').style.display = 'none';
+// });
 
 function checkMenu() {
     if(document.querySelector('body').getBoundingClientRect().top < 0){

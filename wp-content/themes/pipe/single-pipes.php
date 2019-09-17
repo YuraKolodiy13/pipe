@@ -15,8 +15,38 @@
             </li>
         </ul>
         <h1><?php the_title(); ?></h1>
-        <div class="content__img" style="background: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>') center no-repeat; background-size: cover"></div>
+      <div class="content__firstBlock firstBlock">
+        <div class="slider-block">
+          <div class="firstBlock__description" id="lightSlider">
+            <div class="content__img" data-thumb="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>" style="background: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>') center no-repeat; background-size: cover; width: 100%"></div>
+            <div class="content__img" data-thumb="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>" style="background: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>') center no-repeat; background-size: cover; width: 100%"></div>
+            <div class="content__img" data-thumb="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>" style="background: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>') center no-repeat; background-size: cover; width: 100%"></div>
+          </div>
+        </div>
+        <div class="firstBlock__wrap">
+          <div class="firstBlock__row">
+            <div class="firstBlock__name">Додаткова інформація</div>
+          </div>
+          <div class="firstBlock__row">
+            <div>MODEL: </div>
+            <div>usa</div>
+          </div>
+          <div class="firstBlock__row">
+            <div>MATERIAL: </div>
+            <div>february</div>
+          </div>
+          <div class="firstBlock__row">
+            <div>FINISH: </div>
+            <div>8</div>
+          </div>
+          <div class="firstBlock__row">
+            <div>STANDARDS: </div>
+            <div>Technologies</div>
+          </div>
+        </div>
+      </div>
         <div class="content-here">
+          <h2>Опис</h2>
             <?php  the_content();  ?>
         </div>
     </div>
@@ -54,18 +84,30 @@
                             <div class="blog__bg animateScale" style="background: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>) no-repeat center; background-size: cover"></div>
                         </div>
                         <div class="blog__info">
-                            <div class="blog__title"><?php the_title(); ?></div>
-                            <div class="blog__bottom">
-                                <div class="blog__logo">
-                                    <img src="<?php the_field('case_logo');?>" alt="">
-                                    <p><?php the_field('case_name');?></p>
-                                </div>
-                                <div class="learnMore__wrapper learnMore--green">
-                                    <a href="<?php the_permalink($post->ID); ?>" class="learnMore">
-                                        <span><svg><use xlink:href="#arrow" href="#arrow"></use></svg></span>
-                                    </a>
-                                </div>
+                          <div class="blog__top">
+                            <div class="blog__category">
+                              <?php
+                              $terms = get_the_terms( $post->ID, 'pipes-categories');
+                              if ( $terms != null ) {
+                                foreach ($terms as $term) {
+                                  print  '<span>' . $term->name . '</span>';
+                                  unset($term);
+                                }
+                              }
+                              ?>
                             </div>
+                          </div>
+                          <div class="blog__title"><?php the_title(); ?></div>
+                          <div class="blog__price">
+                            <span>Ціна:</span>
+                            <span><?php the_field('price');?></span>
+                          </div>
+                          <div class="wrapper-btn">
+                            <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg"><rect id="btn" height="40" width="150" /><div id="btn-text">
+                                <a href="<?php the_permalink($post->ID); ?>" class="learn-more">Детальніше</a>
+                              </div>
+                            </svg>
+                          </div>
                         </div>
                         <a href="<?php the_permalink($post->ID); ?>" class="blog__link"></a>
                     </div>
@@ -87,6 +129,20 @@
 
 <?php endwhile; ?>
 
-<a id="back2Top" class="btn" href="#">Go up</a>
+<a id="back2Top" class="btn" href="#">Вверх</a>
 
 <?php get_footer(); ?>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#lightSlider").lightSlider({
+      gallery: true,
+      item: 1,
+      loop:true,
+      slideMargin: 0,
+      thumbItem: 5,
+      controls: true
+
+    });
+  });
+</script>

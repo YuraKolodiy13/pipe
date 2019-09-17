@@ -83,10 +83,15 @@ get_header(); ?>
                       </div>
                 </div>
                 <div class="blog__title"><?php the_title(); ?></div>
-                <div class="learnMore__wrapper learnMore--green">
-                  <a href="<?php the_permalink($post->ID); ?>" class="learnMore">
-                    <span><svg><use xlink:href="#arrow" href="#arrow"></use></svg></span>
-                  </a>
+                <div class="blog__price">
+                  <span>Ціна:</span>
+                  <span><?php the_field('price');?></span>
+                </div>
+                <div class="wrapper-btn">
+                  <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg"><rect id="btn" height="40" width="150" /><div id="btn-text">
+                      <a href="<?php the_permalink($post->ID); ?>" class="learn-more">Детальніше</a>
+                    </div>
+                  </svg>
                 </div>
               </div>
               <a href="<?php the_permalink($post->ID); ?>" class="blog__link"></a>
@@ -105,7 +110,7 @@ get_header(); ?>
       <?php wp_reset_postdata(); ?>
 
     </div>
-    <a id="back2Top" class="btn" href="#">Go up</a>
+    <a id="back2Top" class="btn" href="#">Вверх</a>
   </div>
 
 

@@ -36,7 +36,7 @@
       </div>
     </div>
   </div>
-  <a id="back2Top" class="btn" href="#">Go up</a>
+  <a id="back2Top" class="btn" href="#">Вверх</a>
 </div>
 
 

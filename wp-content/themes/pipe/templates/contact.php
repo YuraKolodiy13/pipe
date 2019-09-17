@@ -56,6 +56,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
+  <a id="back2Top" class="btn" href="#">Вверх</a>
 </div>
 
 

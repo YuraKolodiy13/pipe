@@ -9,8 +9,8 @@
     span.current{
       height: 40px;
       width: 40px;
-      background: linear-gradient(90deg, #238924 0%, #24B024 100%);
-      border-radius: 50%;
+      background: #00a046;
+      border-radius: 4px;
       color: #fff;
       border: none;
     }
@@ -18,7 +18,7 @@
       height: 40px;
       width: 40px;
       border: 2px solid #888B97;
-      border-radius: 50%;
+      border-radius: 4px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -34,8 +34,8 @@
     a{
       transition: .3s;
       &:hover{
-        border-color: #24B024;
-        color: #24B024;
+        border-color: #00a046;
+        color: #00a046;
       }
     }
     .dots{
@@ -79,7 +79,7 @@
       }
     }
     .prev{
-      left: -100px;
+      left: -50px;
       &::before{
         left: 0;
       }
@@ -89,7 +89,7 @@
       }
     }
     .next{
-      right: -100px;
+      right: -50px;
       &::before{
         right: 0;
       }

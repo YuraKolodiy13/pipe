@@ -45,7 +45,7 @@
               content: '';
               width: 100%;
               height: 3px;
-              background: linear-gradient(270deg, #24B224 0%, #238624 100%);
+              background: #00a046;
               top: 0;
               left: 0;
               position: absolute;
@@ -61,13 +61,13 @@
           transition: .3s;
           cursor: pointer;
           &:hover{
-            color: #238624;
+            color: #00a046;
           }
         }
         .current-menu-item,
         .current-menu-parent{
           & > a{
-            color: #238624;
+            color: #00a046;
             font-family: Cuprum, Arial, sans-serif;
             font-weight: 500;
           }
@@ -154,7 +154,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            border: 2px solid #238624;
+            border: 2px solid #00a046;
             display: block;
             position: absolute;
             transition: all .5s ease;
@@ -168,26 +168,10 @@
             right: 4px;
             top: 11px;
             display: block;
-            background-color: #238624;
+            background-color: #00a046;
             transform: rotate(-49deg);
             transition: all .5s ease;
           }
-        }
-        .contactBtn{
-          height: 36px;
-          width: 139px;
-          background: linear-gradient(245deg, #24B224 0%, #1d741e 100%);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #FFFFFF;
-          font-family: Cuprum, Arial, sans-serif;
-          font-size: 16px;
-          line-height: 29px;
-          margin-left: 30px;
-          flex: none;
-          border-radius: 25px;
-          text-decoration: none;
         }
       }
     }
@@ -221,10 +205,10 @@
               .custom-search-form{
                 .search-field{
                   width: 100%;
-                  border-color: #24AE24;
+                  border-color: #00a046;
                   &:focus{
                     outline: none;
-                    border-color: #238624;
+                    border-color: #00a046;
                   }
                 }
                 .input-group-btn{
@@ -239,7 +223,7 @@
             height: 2px;
             width: 18px;
             border: none;
-            background-color: #238624;
+            background-color: #00a046;
             transform: rotate(45deg);
             margin-top: 10px;
             border-radius: 0;
@@ -295,7 +279,7 @@
       .header__nav--tablet{
         display: flex;
         justify-content: space-between;
-        width: 65px;
+        width: 30px;
         margin-left: 10px;
         align-items: flex-end;
         flex: none;
@@ -305,7 +289,7 @@
           z-index: 10;
           i{
             font-size: 26px;
-            color: #238624;
+            color: #00a046;
           }
         }
         .topNav{
@@ -328,7 +312,7 @@
             }
             &.showSubMenu{
               & > a{
-                color: #238624;
+                color: #00a046;
               }
             }
           }
@@ -361,7 +345,7 @@
             transition: all 0.3s ease;
             width: 24px;
             height: 3px;
-            background: #238624;
+            background: #00a046;
             margin-bottom: 4px;
             display: block;
           }
@@ -372,7 +356,7 @@
         &.showMenu{
           .header__btn{
             span {
-              background: #238624;
+              background: #00a046;
               &:first-of-type{
                 transform: rotate(135deg) translate(5px, -5px);
               }
@@ -476,7 +460,7 @@
                 width: 12px;
                 height: 12px;
                 border-radius: 50%;
-                border: 2px solid #238624;
+                border: 2px solid #00a046;
                 display: block;
                 position: absolute;
                 transition: all .5s ease;
@@ -490,7 +474,7 @@
                 right: 4px;
                 top: 11px;
                 display: block;
-                background-color: #238624;
+                background-color: #00a046;
                 transform: rotate(-49deg);
                 transition: all .5s ease;
               }
