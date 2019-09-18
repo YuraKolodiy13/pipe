@@ -17,7 +17,7 @@
   </div>
   <div class="benefits">
     <div class="wrapper">
-      <h2 class="title"><?php the_field('benefits_title'); ?></h2>
+      <h2 class="title section animateTranslate"><?php the_field('benefits_title'); ?></h2>
       <div class="benefits__items">
         <?php
         if( have_rows('benefits') ):
@@ -35,6 +35,30 @@
         endif; ?>
       </div>
     </div>
+  </div>
+  <div class="pipes-categories section">
+    <?php
+    $taxonomy = 'pipes-categories';
+    $terms = get_terms($taxonomy); // Get all terms of a taxonomy
+    ?>
+    <div class="wrapper">
+      <h2 class="title animateTranslate">Каталог товарів</h2>
+      <div class="pipes-categories__items">
+        <?php if ( $terms && !is_wp_error( $terms ) ) :
+          ?>
+          <?php foreach ( $terms as $term ) { ?>
+          <div class="pipes-categories__item animateTranslate">
+            <span style="background: url(<?php the_field('image', $term);?>) no-repeat center; background-size: cover"></span>
+            <a href="<?php echo get_term_link($term->slug, $taxonomy); ?>"></a>
+            <p><?php echo $term->name; ?></p>
+          </div>
+        <?php } ?>
+        <?php endif;?>
+      </div>
+    </div>
+  </div>
+  <div class="map">
+    <?php the_field('map'); ?>
   </div>
   <a id="back2Top" class="btn" href="#">Вверх</a>
 </div>

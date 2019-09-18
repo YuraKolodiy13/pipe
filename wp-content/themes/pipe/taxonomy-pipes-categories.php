@@ -6,7 +6,24 @@
 get_header(); ?>
 
   <div class="blogPage innerPage">
-    <div class="banner section" style="background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(0,0,0,0.6)), url(<?php the_field('pipes_img', 'options');?>) no-repeat center; background-size: cover">
+    <?php
+
+    $taxonomy = 'pipes-categories';
+    $terms = get_terms($taxonomy); // Get all terms of a taxonomy
+
+    ?>
+
+      <?php if ( $terms && !is_wp_error( $terms ) ) :
+        ?>
+        <?php foreach ( $terms as $term ) {
+        if($term->name === single_cat_title( '', false )){
+          $img = get_field('image', $term );
+        }?>
+      <?php } ?>
+      <?php endif;?>
+
+
+    <div class="banner section" style="background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(0,0,0,0.6)), url(<?php echo $img;?>) no-repeat center; background-size: cover">
       <div class="wrapper">
         <div class="banner__content animateTranslate">
           <h1>Каталог труб</h1>

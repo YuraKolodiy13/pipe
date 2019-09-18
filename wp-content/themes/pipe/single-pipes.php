@@ -53,7 +53,7 @@
 
     <div class="related relatedCase innerPage section">
         <div class="wrapper">
-            <h3>related case studies</h3>
+            <h3>Схожі труби</h3>
             <div class="blog__items">
             <?php
             //get the taxonomy terms of custom post type
