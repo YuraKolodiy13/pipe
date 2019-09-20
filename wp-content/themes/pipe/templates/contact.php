@@ -64,6 +64,6 @@ get_header(); ?>
 
 <script>
   document.addEventListener( 'wpcf7mailsent', function( event ) {
-    location = 'https:/localhost/pipe/thank-you';
+    location = 'https:/pipes/thank-you';
   }, false );
 </script>

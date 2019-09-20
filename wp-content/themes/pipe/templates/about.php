@@ -25,13 +25,14 @@ get_header(); ?>
     </div>
     <div class="content wrapper">
       <div class="content-here">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php
+        while ( have_posts() ) : the_post(); ?>
           <p><?php the_content(); ?></p>
-        <?endwhile; else: ?>
-          <p>Sorry, no posts matched your criteria.</p>
-        <?php endif; ?>
+        <?php
+        endwhile;
+        wp_reset_query();
+        ?>
       </div>
-
     </div>
   </div>
 
