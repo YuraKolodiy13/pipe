@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 <div class="contactPage innerPage">
-  <div class="banner section" style="background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(0,0,0,0.5)), url(<?php the_field('contacts_img', 'options');?>) no-repeat center; background-size: cover">
+  <div class="banner section" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<?php the_field('contacts_img', 'options');?>) no-repeat center; background-size: cover">
     <div class="wrapper">
       <div class="banner__content animateTranslate">
         <h1><?php the_title(); ?></h1>

@@ -1,8 +1,4 @@
 <?php
-/**
- * Template name: Template Products
- *
- */
 get_header(); ?>
 
   <div class="blogPage innerPage">
@@ -18,15 +14,16 @@ get_header(); ?>
         <?php foreach ( $terms as $term ) {
         if($term->name === single_cat_title( '', false )){
           $img = get_field('image', $term );
+          $name = $term->name;
         }?>
       <?php } ?>
       <?php endif;?>
 
 
-    <div class="banner section" style="background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(0,0,0,0.6)), url(<?php echo $img;?>) no-repeat center; background-size: cover">
+    <div class="banner section" style="background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(<?php echo $img;?>) no-repeat center; background-size: cover">
       <div class="wrapper">
         <div class="banner__content animateTranslate">
-          <h1>Каталог труб</h1>
+          <h1>Труби <?php echo $name ;?></h1>
         </div>
       </div>
     </div>
@@ -36,7 +33,7 @@ get_header(); ?>
           <a href="/" class="breadcrumb__link">Головна</a>
         </li>
         <li class="breadcrumb__item">
-          <a>Каталог труб</a>
+          <a>Труби <?php echo $name ;?></a>
         </li>
       </ul>
 

@@ -87,6 +87,11 @@ if( function_exists('acf_add_options_page') ) {
   ));
 }
 
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+function wps_deregister_styles() {
+  wp_dequeue_style( 'wp-block-library' );
+}
+
 function wp_corenavi() {
   global $wp_query, $wp_rewrite;
   $pages = '';
@@ -122,3 +127,24 @@ function sr_remove_cf7_scripts() {
     wp_deregister_script( 'contact-form-7' );
   }
 }
+
+function custom_contact_validation_filter( $result, $tag ) {
+
+  // 'contact': is name of tag in contact form
+
+  if ( 'contact' == $tag->name ) {
+    $re_format = '/^[0-9]{10}+$/';  //9425786311
+    $your_contact = $_POST['contact'];
+
+    if (!preg_match($re_format, $your_contact , $matches)) {
+      $result->invalidate($tag, "Enter 10 digits only" );
+    }
+
+  }
+
+  return $result;
+}
+
+add_filter( 'wpcf7_validate_text*', 'custom_contact_validation_filter', 10, 2 );
+
+add_filter( 'wpcf7_validate_text', 'custom_contact_validation_filter', 10, 2 );

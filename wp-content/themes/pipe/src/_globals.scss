@@ -1,5 +1,5 @@
 body{
-  margin: 0;
+  margin: 65px 0 0;
   padding: 0;
   font-family: Cuprum, Arial, sans-serif;
 }
@@ -238,6 +238,7 @@ body{
   iframe{
     width: 100%;
     min-height: 450px;
+    display: block;
   }
 }
 

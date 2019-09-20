@@ -162,22 +162,42 @@
   .footer{
     .footer__top{
       .footer__items{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .footer__title{
+          padding: 0;
+          &::before{
+            display: none;
+          }
+        }
         .footer__info{
-          position: absolute;
+          width: auto;
           p{
             display: none;
           }
         }
         .footer__general{
-          width: 45%;
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          .footer__offices{
+            padding-top: 30px;
+          }
         }
         .footer__contacts{
-          width: 50%;
-          order: -1;
-          padding-top: 68px;
+          width: auto;
+          order: 0;
+          padding-top: 30px;
         }
         .footer__social{
-          width: 100%;
+          width: auto;
+          padding-top: 30px;
+          order: 5;
+          ul{
+            justify-content: center;
+          }
           &.footer__social--desktop{
             display: none;
           }

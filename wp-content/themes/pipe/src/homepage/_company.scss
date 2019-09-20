@@ -1,0 +1,26 @@
+.company{
+  position: relative;
+  z-index: 2;
+  .company__wrapper{
+    padding: 120px 0 100px;
+    .title{
+      color: #fff;
+    }
+    p{
+      color: #fff;
+    }
+    #btn-text{
+      a{
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .company{
+    .company__wrapper{
+      padding: 40px 0 50px;
+    }
+  }
+}

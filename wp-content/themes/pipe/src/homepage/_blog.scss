@@ -32,16 +32,7 @@
       position: relative;
       border: 1px solid #ccc;
       border-top: none;
-      flex: 1;
-      .blog__data{
-        color: #888B97;
-        font-family: Cuprum, Arial, sans-serif;
-        font-size: 15px;
-        font-weight: 300;
-        line-height: 26px;
-        margin-bottom: 20px;
-        letter-spacing: .2px;
-      }
+      flex-grow: 1;
       .blog__title{
         color: #393E52;
         font-family: Cuprum, Arial, sans-serif;
@@ -121,28 +112,6 @@
         .learnMore{
           display: flex;
         }
-      }
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  .blog__items {
-    .blog__item {
-      width: 47%;
-      &:last-of-type{
-        display: none;
-      }
-    }
-  }
-}
-@media (max-width: 600px) {
-  .blog__items {
-    .blog__item {
-      width: 100%;
-      display: none;
-      &:first-of-type{
-        display: block;
       }
     }
   }

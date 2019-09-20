@@ -1,5 +1,5 @@
 .content{
-  padding-top: 105px;
+  padding-top: 60px;
   position: relative;
   .content__category{
     display: flex;
@@ -32,6 +32,9 @@
   .content__img{
     height: 500px;
     margin-bottom: 60px;
+    @media (max-width: 767px) {
+      height: 300px;
+    }
     img{
       max-width: 100%;
       height: auto;
@@ -229,5 +232,10 @@
         margin: 40px 0 40px 25px;
       }
     }
+  }
+}
+@media (max-width: 767px) {
+  .content{
+    padding-top: 30px;
   }
 }
