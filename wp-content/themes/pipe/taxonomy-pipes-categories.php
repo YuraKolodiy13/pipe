@@ -45,7 +45,7 @@ get_header(); ?>
 
         ?>
         <ul>
-          <li><a href="/pipe/pipes">Всі</a></li>
+          <li><a href="/pipes">Всі</a></li>
           <?php if ( $terms && !is_wp_error( $terms ) ) :
             ?>
             <?php foreach ( $terms as $term ) {
@@ -61,7 +61,7 @@ get_header(); ?>
       <div class="categories categories--mob">
         <div class="categories__current">Всі</div>
         <ul>
-          <li><a href="/pipe/pipes">Всі</a></li>
+          <li><a href="/pipes">Всі</a></li>
           <?php if ( $terms && !is_wp_error( $terms ) ) :
             ?>
             <?php foreach ( $terms as $term ) {

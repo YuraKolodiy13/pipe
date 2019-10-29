@@ -201,6 +201,8 @@
     .header__logo {
       height: 43px;
       width: 116px;
+      display: flex;
+      align-items: center;
       img{
         width: 100%;
         height: auto;

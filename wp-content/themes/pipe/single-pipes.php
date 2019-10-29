@@ -19,8 +19,13 @@
         <div class="slider-block">
           <div class="firstBlock__description" id="lightSlider">
             <div class="content__img" data-thumb="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>" style="background: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>') center no-repeat; background-size: cover; width: 100%"></div>
-            <div class="content__img" data-thumb="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>" style="background: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>') center no-repeat; background-size: cover; width: 100%"></div>
-            <div class="content__img" data-thumb="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>" style="background: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'full' );?>') center no-repeat; background-size: cover; width: 100%"></div>
+            <?php
+            $images = get_field('images');
+            if( $images ): ?>
+              <?php foreach( $images as $image ): ?>
+                <div class="content__img" data-thumb="<?php echo $image['url'];?>" style="background: url('<?php echo $image['url'];?>') center no-repeat; background-size: cover; width: 100%"></div>
+              <?php endforeach; ?>
+            <?php endif; ?>
           </div>
         </div>
         <div class="firstBlock__wrap">
